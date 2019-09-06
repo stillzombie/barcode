@@ -1,14 +1,14 @@
-[![Packagist Downloads](https://img.shields.io/packagist/dt/milon/barcode.svg)](https://packagist.org/packages/milon/barcode) [![Stable version](https://img.shields.io/packagist/v/milon/barcode.svg)](https://packagist.org/packages/milon/barcode) [![License](https://img.shields.io/packagist/l/milon/barcode.svg)](https://packagist.org/packages/milon/barcode)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/stillzombie/barcode.svg)](https://packagist.org/packages/stillzombie/barcode) [![Stable version](https://img.shields.io/packagist/v/stillzombie/barcode.svg)](https://packagist.org/packages/stillzombie/barcode) [![License](https://img.shields.io/packagist/l/stillzombie/barcode.svg)](https://packagist.org/packages/stillzombie/barcode)
 
 This is a barcode generation package inspired by <https://github.com/tecnickcom/TCPDF>. Actually, I use that package's underline classes for generating barcodes. This package is just a wrapper of that package and adds compatibility with Laravel 5.
 
 I used the following classes of that package.
 
-- src/Milon/Barcode/Datamatrix.php (include/barcodes/datamatrix.php)
-- src/Milon/Barcode/DNS1D.php (tcpdf_barcodes_1d.php)
-- src/Milon/Barcode/DNS2D.php (tcpdf_barcodes_2d.php)
-- src/Milon/Barcode/PDF417.php (include/barcodes/pdf417.php)
-- src/Milon/Barcode/QRcode.php (include/barcodes/qrcode.php)
+- src/Stillzombie/Barcode/Datamatrix.php (include/barcodes/datamatrix.php)
+- src/Stillzombie/Barcode/DNS1D.php (tcpdf_barcodes_1d.php)
+- src/Stillzombie/Barcode/DNS2D.php (tcpdf_barcodes_2d.php)
+- src/Stillzombie/Barcode/PDF417.php (include/barcodes/pdf417.php)
+- src/Stillzombie/Barcode/QRcode.php (include/barcodes/qrcode.php)
 
 [Read More on TCPDF website](http://www.tcpdf.org)
 
@@ -21,15 +21,15 @@ This package relies on [php-gd](http://php.net/manual/en/book.image.php) extensi
 Begin by installing this package through Composer. Just run following command to terminal-
 
 ```
-composer require milon/barcode
+composer require stillzombie/barcode
 ```
 
-You can also edit your project's `composer.json` file to require `milon/barcode`.
+You can also edit your project's `composer.json` file to require `stillzombie/barcode`.
 
 ```
 "require": {
     ...
-    "milon/barcode": "^5.3"
+    "stillzombie/barcode": "^5.3"
 }
 ```
 
@@ -38,7 +38,7 @@ For Laravel 5.0 and 5.1 use this-
 ```
 "require": {
     ...
-    "milon/barcode": "^5.1"
+    "stillzombie/barcode": "^5.1"
 }
 ```
 
@@ -47,7 +47,7 @@ For Laravel 4.0, 4.1 and 4.2 use this-
 ```
 "require": {
     ...
-    "milon/barcode": "^4.2"
+    "stillzombie/barcode": "^4.2"
 }
 ```
 
@@ -62,7 +62,7 @@ Once this operation completes, the final step is to add the service provider. Op
 ```php
 'providers' => [
     ...
-    Milon\Barcode\BarcodeServiceProvider::class,
+    Stillzombie\Barcode\BarcodeServiceProvider::class,
     ...
 ]
 ```
@@ -72,7 +72,7 @@ For version 4.* add these lines on `app/config/app.php` file-
 ```php
 'providers' => array(
     ...
-    'Milon\Barcode\BarcodeServiceProvider',
+    'Stillzombie\Barcode\BarcodeServiceProvider',
 )
 ```
 
@@ -83,7 +83,7 @@ If you want to change Bar-code's settings (Store Path etc.), you need to publish
 php artisan vendor:publish
 
 # Laravel 4.x
-php artisan config:publish milon/barcode
+php artisan config:publish stillzombie/barcode
 ```
 
 Make sure you have write permission to the storage path. By default it sets to `/storage` folder.
@@ -93,8 +93,8 @@ Now add the alias.
 ```php
 'aliases' => [
     ...
-    'DNS1D' => Milon\Barcode\Facades\DNS1DFacade::class,
-    'DNS2D' => Milon\Barcode\Facades\DNS2DFacade::class,
+    'DNS1D' => Stillzombie\Barcode\Facades\DNS1DFacade::class,
+    'DNS2D' => Stillzombie\Barcode\Facades\DNS2DFacade::class,
 ]
 ```
 
@@ -103,8 +103,8 @@ For version 4.2 alias will be like this-
 ```php
 'aliases' => array(
     ...
-    'DNS1D' => 'Milon\Barcode\Facades\DNS1DFacade',
-    'DNS2D' => 'Milon\Barcode\Facades\DNS2DFacade',
+    'DNS1D' => 'Stillzombie\Barcode\Facades\DNS1DFacade',
+    'DNS2D' => 'Stillzombie\Barcode\Facades\DNS2DFacade',
 )
 ```
 
@@ -208,7 +208,7 @@ You can use this library without using Laravel.
 Example:
 
 ```
-use \Milon\Barcode\DNS1D;
+use \Stillzombie\Barcode\DNS1D;
 
 $d = new DNS1D();
 $d->setStorPath(__DIR__."/cache/");
@@ -217,12 +217,12 @@ echo $d->getBarcodeHTML("9780691147727", "EAN13");
 
 ## License
 
-This package is published under `GNU LGPLv3` license and copyright to [Nuruzzaman Milon](http://milon.im). Original Barcode generation classes were written by Nicola Asuni. The license agreement is on project's root.
+This package is published under `GNU LGPLv3` license and copyright to [Nuruzzaman Stillzombie](http://stillzombie.im). Original Barcode generation classes were written by Nicola Asuni. The license agreement is on project's root.
 
 License: GNU LGPLv3<br>
-Package Author: [Nuruzzaman Milon](http://milon.im)<br>
+Package Author: [Nuruzzaman Stillzombie](http://stillzombie.im)<br>
 Original Barcode Class Author: [Nicola Asuni](http://www.tcpdf.org)<br>
-Package Copyright: Nuruzzaman Milon<br>
+Package Copyright: Nuruzzaman Stillzombie<br>
 Barcode Generation Class Copyright:<br>
 Nicola Asuni<br>
 Tecnick.com LTD<br>

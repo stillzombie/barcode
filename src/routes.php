@@ -2,7 +2,7 @@
 
 /*
   |--------------------------------------------------------------------------
-  | Milon/Barcode Routes
+  | Stillzombie/Barcode Routes
   |--------------------------------------------------------------------------
   |
   | Here is where you can register all of the routes for an application.
