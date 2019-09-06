@@ -1,5 +1,3 @@
-[![Packagist Downloads](https://img.shields.io/packagist/dt/stillzombie/barcode.svg)](https://packagist.org/packages/stillzombie/barcode) [![Stable version](https://img.shields.io/packagist/v/stillzombie/barcode.svg)](https://packagist.org/packages/stillzombie/barcode) [![License](https://img.shields.io/packagist/l/stillzombie/barcode.svg)](https://packagist.org/packages/stillzombie/barcode)
-
 This is a barcode generation package inspired by <https://github.com/tecnickcom/TCPDF>. Actually, I use that package's underline classes for generating barcodes. This package is just a wrapper of that package and adds compatibility with Laravel 5.
 
 I used the following classes of that package.
@@ -12,7 +10,7 @@ I used the following classes of that package.
 
 [Read More on TCPDF website](http://www.tcpdf.org)
 
-# This package is compatible with Laravel 5.2, 5.3 and 5.4
+# This package is compatible with Laravel 5.2, 5.3 and 5.4 and Laravel 6.0
 
 This package relies on [php-gd](http://php.net/manual/en/book.image.php) extension. So, make sure it is installed on your machine.
 
@@ -217,12 +215,12 @@ echo $d->getBarcodeHTML("9780691147727", "EAN13");
 
 ## License
 
-This package is published under `GNU LGPLv3` license and copyright to [Nuruzzaman Stillzombie](http://stillzombie.im). Original Barcode generation classes were written by Nicola Asuni. The license agreement is on project's root.
+This package is published under `GNU LGPLv3` license and copyright to [Victor Casanas](http://stillzombie.im). Original Barcode generation classes were written by Nicola Asuni. The license agreement is on project's root.
 
 License: GNU LGPLv3<br>
-Package Author: [Nuruzzaman Stillzombie](http://stillzombie.im)<br>
+Package Author: [Victor Casanas](ing.vic.casanas@gmail.com)<br>
 Original Barcode Class Author: [Nicola Asuni](http://www.tcpdf.org)<br>
-Package Copyright: Nuruzzaman Stillzombie<br>
+Package Copyright: Victor Casanas<br>
 Barcode Generation Class Copyright:<br>
 Nicola Asuni<br>
 Tecnick.com LTD<br>
